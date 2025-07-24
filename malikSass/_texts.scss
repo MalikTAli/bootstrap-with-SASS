@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+@each $key, $val in $texts {
+  .my-text-#{$key} {
+    font-size: $val;
+  }
+}

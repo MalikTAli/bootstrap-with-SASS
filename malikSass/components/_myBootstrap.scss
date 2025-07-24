@@ -1,0 +1,27 @@
+@use "../variables" as *;
+
+.nav-tabs {
+  border: none;
+  margin-bottom: $base-margin * 2;
+  li:first-child {
+    .nav-link {
+      border-right: 3px solid black;
+      border-radius: 0px;
+    }
+  }
+  .nav-item {
+    .nav-link {
+      font-size: $font-size-lg;
+      &:hover {
+        // border: none;
+      }
+    }
+    .active {
+      border: none;
+      font-weight: bold;
+    }
+    .tab-color {
+      color: black !important;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use "../variables" as *;
+@use "../texts" as *;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: $base-margin;
+  div {
+    position: relative;
+    width: 100%;
+  }
+  .password-container {
+    span {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $secondary;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      font-family: "Lato", sans-serif;
+    }
+  }
+  div:last-of-type {
+    display: flex;
+    justify-content: space-between;
+  }
+  input {
+    &[type="text"],
+    &[type="password"] {
+      max-width: 100%;
+      min-width: 100%;
+      height: $input-height;
+      padding: 0 12px;
+    }
+
+    &[type="checkbox"] {
+      transform: scale(1.5);
+    }
+
+    &[type="submit"] {
+      height: $submit-height;
+      background-color: $primary;
+      color: white;
+      border: none;
+      font-weight: bold;
+      padding: 0px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  label {
+    span {
+      opacity: 0.7;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $secondary;
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+  }
+  ul li {
+    margin-bottom: 10px;
+  }
+}

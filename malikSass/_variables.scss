@@ -1,0 +1,39 @@
+$primary: #0061aa;
+$secondary: #2567ae;
+$error: #d32752;
+$info: #f6c31c;
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "error": $error,
+  "info": $info,
+  "black": black,
+  "white": white,
+);
+
+// space
+$base-padding: 10px;
+$base-margin: 10px;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 15px;
+
+// fonts
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
+
+// for inputs
+$input-height: 50px;
+$submit-height: 40px;
+
+$texts: (
+  "sm": $font-size-sm,
+  "lg": $font-size-lg,
+  "xl": $font-size-xl,
+  "xxl": $font-size-xxl,
+);

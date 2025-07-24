@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+.togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $secondary;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}

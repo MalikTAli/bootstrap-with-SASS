@@ -1,0 +1,20 @@
+@use "variables" as *;
+
+@each $key, $val in $colors {
+  .my-text-#{$key} {
+    color: $val;
+  }
+  .my-text-hover-#{$key} {
+    &:hover {
+      color: $val;
+    }
+  }
+  .my-bg-#{$key} {
+    background-color: $val;
+  }
+  .my-bg-hover-#{$key} {
+    &:hover {
+      background-color: $val;
+    }
+  }
+}

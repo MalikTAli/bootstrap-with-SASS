@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- my sass -->
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Form with SASS and bootstrap</title>
+  </head>
+  <body>
+    <div class="bg-white p-3 mw-md">
+      <ul class="nav nav-tabs" role="tablist">
+        <li id="logIn" class="nav-item">
+          <a
+            class="nav-link tab-color active"
+            data-bs-toggle="tab"
+            href="#logIn-form"
+            >Log In</a
+          >
+        </li>
+        <li id="signUp" class="nav-item">
+          <a class="nav-link tab-color" data-bs-toggle="tab" href="#signUp-form"
+            >Create New Account</a
+          >
+        </li>
+      </ul>
+      <div id="forms-container" class="tab-content">
+        <div id="logIn-form" class="tab-pane container active my-p-0">
+          <form id="log">
+            <div>
+              <input
+                id="email"
+                type="text"
+                name="email"
+                placeholder="Email"
+                autofocus
+                data-msg-required="Please enter your email"
+                data-msg-invalid="Please enter a valid email"
+              />
+              <p id="error-email" class="error-message my-text-sm"></p>
+            </div>
+            <div class="password-container">
+              <div>
+                <input
+                  id="password"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  data-msg-required="Please enter your password"
+                  data-msg-minlength="Password must be 8 characters at least"
+                  data-msg-uppercase="Please enter one capital letter at least"
+                  data-msg-lowercase="Please enter one small letter at least"
+                  data-msg-digit="Please enter one digit at least"
+                  data-msg-special="Please enter one special character at least"
+                />
+                <span class="togglePassword" tabindex="0">Show</span>
+              </div>
+              <p id="error-password" class="error-message my-text-sm"></p>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" id="rememberme" />
+                <span>Remember me</span>
+              </label>
+              <a href="https://www.google.com" target="_blank"
+                >Forgot password?</a
+              >
+            </div>
+            <input type="submit" value="Login" />
+          </form>
+        </div>
+        <div id="signUp-form" class="tab-pane container fade my-p-0">
+          <form id="register">
+            <div>
+              <input
+                type="text"
+                id="first-name"
+                placeholder="First Name"
+                data-msg-required="Please enter your first name"
+                data-msg-invalid="First name should contain only letters"
+              />
+              <p id="error-first-name" class="error-message my-text-sm"></p>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="last-name"
+                placeholder="Last Name"
+                data-msg-required="Please enter your last name"
+                data-msg-invalid="Last name should contain only letters"
+              />
+              <p id="error-last-name" class="error-message my-text-sm"></p>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="signup-email"
+                placeholder="Email"
+                autofocus
+                data-msg-required="Please enter your email"
+                data-msg-invalid="Please enter a valid email"
+              />
+              <p id="error-signup-email" class="error-message my-text-sm"></p>
+            </div>
+            <div class="password-container">
+              <div>
+                <input
+                  type="password"
+                  id="signup-password"
+                  placeholder="Password"
+                  data-msg-required="Please enter your password"
+                  data-msg-minlength="Password must be 8 characters at least"
+                  data-msg-uppercase="Please enter one capital letter at least"
+                  data-msg-lowercase="Please enter one small letter at least"
+                  data-msg-digit="Please enter one digit at least"
+                  data-msg-special="Please enter one special character at least"
+                />
+                <span class="togglePassword" tabindex="0">Show</span>
+              </div>
+              <p
+                id="error-signup-password"
+                class="error-message my-text-sm"
+              ></p>
+            </div>
+            <div class="password-container">
+              <div>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  placeholder="Confirm Password"
+                  data-msg-mismatch="Sorry, the provided password does not match the required constraints."
+                />
+                <span id="toggleconfirmPassword" tabindex="0">Show</span>
+              </div>
+              <p
+                id="error-confirm-password"
+                class="error-message my-text-sm"
+              ></p>
+            </div>
+            <div>
+              <ul style="margin: 0px">
+                <li>Include 8 or more characters</li>
+                <li>Include at least 1 uppercase letter</li>
+                <li>Include AT least 1 number</li>
+                <li>Include at least 1 special character</li>
+              </ul>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" id="terms" />
+                <span
+                  >stay updated on new products, great offers and store
+                  events</span
+                >
+              </label>
+            </div>
+
+            <input
+              id="signup-submit"
+              type="submit"
+              disabled="true"
+              value="Create Account"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

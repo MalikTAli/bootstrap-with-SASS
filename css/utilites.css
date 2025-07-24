@@ -1,0 +1,31 @@
+.my-w-sm {
+  width: 200px;
+}
+
+.mw-sm {
+  min-width: 200px;
+}
+
+.my-w-md {
+  width: 410px;
+}
+
+.mw-md {
+  min-width: 410px;
+}
+
+.my-w-lg {
+  width: 600px;
+}
+
+.mw-lg {
+  min-width: 600px;
+}
+
+.my-w-xl {
+  width: 100%;
+}
+
+.mw-xl {
+  min-width: 100%;
+}

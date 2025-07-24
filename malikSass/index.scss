@@ -1,0 +1,21 @@
+//   i make some custom classes like my-text-primary and so on just to show you what i learn on sass and how to build my css library
+
+// variables
+@use "variables";
+
+// base style
+@use "base";
+
+// colors
+@use "colors";
+// borders
+@use "borders";
+// font-size
+@use "texts";
+
+// components
+@use "components/form";
+@use "components/error";
+@use "components/myBootstrap";
+
+@use "utilites";

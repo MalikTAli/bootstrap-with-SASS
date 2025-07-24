@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5 !important;
+}
+
+.my-text-primary {
+  color: #0061aa;
+}
+
+.my-text-hover-primary:hover {
+  color: #0061aa;
+}
+
+.my-bg-primary {
+  background-color: #0061aa;
+}
+
+.my-bg-hover-primary:hover {
+  background-color: #0061aa;
+}
+
+.my-text-secondary {
+  color: #2567ae;
+}
+
+.my-text-hover-secondary:hover {
+  color: #2567ae;
+}
+
+.my-bg-secondary {
+  background-color: #2567ae;
+}
+
+.my-bg-hover-secondary:hover {
+  background-color: #2567ae;
+}
+
+.my-text-error {
+  color: #d32752;
+}
+
+.my-text-hover-error:hover {
+  color: #d32752;
+}
+
+.my-bg-error {
+  background-color: #d32752;
+}
+
+.my-bg-hover-error:hover {
+  background-color: #d32752;
+}
+
+.my-text-info {
+  color: #f6c31c;
+}
+
+.my-text-hover-info:hover {
+  color: #f6c31c;
+}
+
+.my-bg-info {
+  background-color: #f6c31c;
+}
+
+.my-bg-hover-info:hover {
+  background-color: #f6c31c;
+}
+
+.my-text-black {
+  color: black;
+}
+
+.my-text-hover-black:hover {
+  color: black;
+}
+
+.my-bg-black {
+  background-color: black;
+}
+
+.my-bg-hover-black:hover {
+  background-color: black;
+}
+
+.my-text-white {
+  color: white;
+}
+
+.my-text-hover-white:hover {
+  color: white;
+}
+
+.my-bg-white {
+  background-color: white;
+}
+
+.my-bg-hover-white:hover {
+  background-color: white;
+}
+
+.my-b-primary {
+  border: 1px solid #0061aa;
+}
+
+.my-b-secondary {
+  border: 1px solid #2567ae;
+}
+
+.my-b-error {
+  border: 1px solid #d32752;
+}
+
+.my-b-info {
+  border: 1px solid #f6c31c;
+}
+
+.my-b-black {
+  border: 1px solid black;
+}
+
+.my-b-white {
+  border: 1px solid white;
+}
+
+.my-text-sm {
+  font-size: 0.75rem;
+}
+
+.my-text-lg {
+  font-size: 1.5rem;
+}
+
+.my-text-xl {
+  font-size: 2rem;
+}
+
+.my-text-xxl {
+  font-size: 3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 10px;
+}
+form div {
+  position: relative;
+  width: 100%;
+}
+form .password-container span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #2567ae;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  font-family: "Lato", sans-serif;
+}
+form div:last-of-type {
+  display: flex;
+  justify-content: space-between;
+}
+form input[type=text], form input[type=password] {
+  max-width: 100%;
+  min-width: 100%;
+  height: 50px;
+  padding: 0 12px;
+}
+form input[type=checkbox] {
+  transform: scale(1.5);
+}
+form input[type=submit] {
+  height: 40px;
+  background-color: #0061aa;
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+form label span {
+  opacity: 0.7;
+}
+form a {
+  text-decoration: none;
+  color: #2567ae;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+}
+form ul li {
+  margin-bottom: 10px;
+}
+
+.error-message {
+  margin: 0px;
+  color: #d32752;
+  font-weight: bold;
+}
+
+.nav-tabs {
+  border: none;
+  margin-bottom: 20px;
+}
+.nav-tabs li:first-child .nav-link {
+  border-right: 3px solid black;
+  border-radius: 0px;
+}
+.nav-tabs .nav-item .nav-link {
+  font-size: 1.5rem;
+}
+.nav-tabs .nav-item .active {
+  border: none;
+  font-weight: bold;
+}
+.nav-tabs .nav-item .tab-color {
+  color: black !important;
+}
+
+.my-w-sm {
+  width: 200px;
+}
+
+.mw-sm {
+  min-width: 200px;
+}
+
+.my-w-md {
+  width: 410px;
+}
+
+.mw-md {
+  min-width: 410px;
+}
+
+.my-w-lg {
+  width: 600px;
+}
+
+.mw-lg {
+  min-width: 600px;
+}
+
+.my-w-xl {
+  width: 100%;
+}
+
+.mw-xl {
+  min-width: 100%;
+}

@@ -1,0 +1,15 @@
+$widths: (
+  "sm": 200px,
+  "md": 410px,
+  "lg": 600px,
+  "xl": 100%,
+);
+
+@each $key, $val in $widths {
+  .my-w-#{$key} {
+    width: $val;
+  }
+  .mw-#{$key} {
+    min-width: $val;
+  }
+}

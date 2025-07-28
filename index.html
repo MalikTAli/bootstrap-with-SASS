@@ -17,25 +17,38 @@
   <body>
     <div class="bg-white p-3 mw-md">
       <ul class="nav nav-tabs" role="tablist">
-        <li id="logIn" class="nav-item">
+        <li id="logIn" class="nav-item" role="presentation">
           <a
             class="nav-link tab-color active"
             data-bs-toggle="tab"
             href="#logIn-form"
+            id="login-tab"
+            role="tab"
+            aria-controls="logIn-form"
+            aria-selected="true"
             >Log In</a
           >
         </li>
-        <li id="signUp" class="nav-item">
-          <a class="nav-link tab-color" data-bs-toggle="tab" href="#signUp-form"
+        <li id="signUp" class="nav-item" role="presentation">
+          <a
+            class="nav-link tab-color"
+            data-bs-toggle="tab"
+            href="#signUp-form"
+            id="signup-tab"
+            role="tab"
+            aria-controls="signUp-form"
+            aria-selected="false"
             >Create New Account</a
           >
         </li>
       </ul>
       <div id="forms-container" class="tab-content">
         <div id="logIn-form" class="tab-pane container active my-p-0">
-          <form id="log">
-            <div>
+          <form id="log" class="d-flex flex-column gap-3">
+            <div class="position-relative w-100">
+              <label for="email" class="visually-hidden">Email</label>
               <input
+                class="form-control form-control-lg"
                 id="email"
                 type="text"
                 name="email"
@@ -43,12 +56,20 @@
                 autofocus
                 data-msg-required="Please enter your email"
                 data-msg-invalid="Please enter a valid email"
+                aria-describedby="error-email"
+                aria-required="true"
               />
-              <p id="error-email" class="error-message my-text-sm"></p>
+              <p
+                id="error-email"
+                class="error-message my-text-sm"
+                aria-live="polite"
+              ></p>
             </div>
-            <div class="password-container">
-              <div>
+            <div class="password-container position-relative w-100">
+              <div class="position-relative w-100">
+                <label for="password" class="visually-hidden">Password</label>
                 <input
+                  class="form-control form-control-lg"
                   id="password"
                   type="password"
                   name="password"
@@ -59,59 +80,106 @@
                   data-msg-lowercase="Please enter one small letter at least"
                   data-msg-digit="Please enter one digit at least"
                   data-msg-special="Please enter one special character at least"
+                  aria-describedby="error-password"
+                  aria-required="true"
                 />
-                <span class="togglePassword" tabindex="0">Show</span>
+                <span
+                  class="togglePassword position-absolute fw-bold top-50 my-text-secondary"
+                  data-target="#password"
+                  tabindex="0"
+                  >Show</span
+                >
               </div>
-              <p id="error-password" class="error-message my-text-sm"></p>
+              <p
+                id="error-password"
+                class="error-message my-text-sm"
+                aria-live="polite"
+              ></p>
             </div>
-            <div>
+            <div class="position-relative w-100 d-flex justify-content-between">
               <label>
+                <label for="rememberme" class="visually-hidden"></label>
                 <input type="checkbox" id="rememberme" />
                 <span>Remember me</span>
               </label>
-              <a href="https://www.google.com" target="_blank"
+              <a
+                class="my-text-secondary text-decoration-none fw-semibold"
+                href="https://www.google.com"
+                target="_blank"
                 >Forgot password?</a
               >
             </div>
-            <input type="submit" value="Login" />
+            <input
+              class="btn my-bg-primary my-text-white fw-bold border-0 px-2 py-2"
+              type="submit"
+              value="Login"
+            />
           </form>
         </div>
         <div id="signUp-form" class="tab-pane container fade my-p-0">
-          <form id="register">
-            <div>
+          <form id="register" class="d-flex flex-column gap-3">
+            <div class="position-relative w-100">
+              <label for="first-name" class="visually-hidden">First Name</label>
               <input
+                class="form-control form-control-lg"
                 type="text"
                 id="first-name"
                 placeholder="First Name"
                 data-msg-required="Please enter your first name"
                 data-msg-invalid="First name should contain only letters"
+                aria-describedby="error-first-name"
+                aria-required="true"
               />
-              <p id="error-first-name" class="error-message my-text-sm"></p>
+              <p
+                id="error-first-name"
+                class="error-message my-text-sm"
+                aria-live="polite"
+              ></p>
             </div>
-            <div>
+            <div class="position-relative w-100">
+              <label for="last-name" class="visually-hidden">Last Name</label>
               <input
+                class="form-control form-control-lg"
                 type="text"
                 id="last-name"
                 placeholder="Last Name"
                 data-msg-required="Please enter your last name"
                 data-msg-invalid="Last name should contain only letters"
+                aria-describedby="error-last-name"
+                aria-required="true"
               />
-              <p id="error-last-name" class="error-message my-text-sm"></p>
+              <p
+                id="error-last-name"
+                class="error-message my-text-sm"
+                aria-live="polite"
+              ></p>
             </div>
-            <div>
+            <div class="position-relative w-100">
+              <label for="signup-email" class="visually-hidden">Eamil</label>
               <input
+                class="form-control form-control-lg"
                 type="text"
                 id="signup-email"
                 placeholder="Email"
                 autofocus
                 data-msg-required="Please enter your email"
                 data-msg-invalid="Please enter a valid email"
+                aria-describedby="error-signup-email"
+                aria-required="true"
               />
-              <p id="error-signup-email" class="error-message my-text-sm"></p>
+              <p
+                id="error-signup-email"
+                class="error-message my-text-sm"
+                aria-live="polite"
+              ></p>
             </div>
-            <div class="password-container">
-              <div>
+            <div class="password-container position-relative w-100">
+              <div class="position-relative w-100">
+                <label for="signup-password" class="visually-hidden"
+                  >Password</label
+                >
                 <input
+                  class="form-control form-control-lg"
                   type="password"
                   id="signup-password"
                   placeholder="Password"
@@ -121,39 +189,60 @@
                   data-msg-lowercase="Please enter one small letter at least"
                   data-msg-digit="Please enter one digit at least"
                   data-msg-special="Please enter one special character at least"
+                  aria-describedby="error-signup-password"
+                  aria-required="true"
                 />
-                <span class="togglePassword" tabindex="0">Show</span>
+                <span
+                  class="togglePassword position-absolute fw-bold top-50 my-text-secondary"
+                  data-target="#signup-password"
+                  tabindex="0"
+                  >Show</span
+                >
               </div>
               <p
                 id="error-signup-password"
                 class="error-message my-text-sm"
+                aria-live="polite"
               ></p>
             </div>
-            <div class="password-container">
-              <div>
+            <div class="password-container position-relative w-100">
+              <div class="position-relative w-100">
+                <label for="confirm-password" class="visually-hidden">
+                  confirm password</label
+                >
                 <input
+                  class="form-control form-control-lg"
                   type="password"
                   id="confirm-password"
                   placeholder="Confirm Password"
                   data-msg-mismatch="Sorry, the provided password does not match the required constraints."
+                  aria-describedby="error-confirm-password"
+                  aria-required="true"
                 />
-                <span id="toggleconfirmPassword" tabindex="0">Show</span>
+                <span
+                  class="togglePassword position-absolute fw-bold top-50 my-text-secondary"
+                  id="toggleconfirmPassword"
+                  data-target="#confirm-password"
+                  tabindex="0"
+                  >Show</span
+                >
               </div>
               <p
                 id="error-confirm-password"
                 class="error-message my-text-sm"
+                aria-live="polite"
               ></p>
             </div>
-            <div>
+            <div class="position-relative w-100">
               <ul style="margin: 0px">
-                <li>Include 8 or more characters</li>
-                <li>Include at least 1 uppercase letter</li>
-                <li>Include AT least 1 number</li>
-                <li>Include at least 1 special character</li>
+                <li class="mb-2">Include 8 or more characters</li>
+                <li class="mb-2">Include at least 1 uppercase letter</li>
+                <li class="mb-2">Include AT least 1 number</li>
+                <li class="mb-2">Include at least 1 special character</li>
               </ul>
             </div>
-            <div>
-              <label>
+            <div class="position-relative w-100">
+              <label for="terms">
                 <input type="checkbox" id="terms" />
                 <span
                   >stay updated on new products, great offers and store
@@ -164,6 +253,7 @@
 
             <input
               id="signup-submit"
+              class="my-bg-primary my-text-white fw-bold border-0 px-2 py-2"
               type="submit"
               disabled="true"
               value="Create Account"
@@ -182,3 +272,11 @@
     ></script>
   </body>
 </html>
+
+<!-- WHAT I DO FOR Accessibility
+1-) ADD label for each input to make the screen reader able to read it 
+2-) use aria-* to connect the inputs with the error message to enable the screen reader to read it when click enter and there is a error
+3-) determine the lnaguage of the page lan=en
+4-) make the hide and show buttons Interactive with enter and space keyboard
+5-) check the Contrast between the background and the text colors inside
+6-) in the tabs use the role="presentation"  to make the screen reader know that this is not interactive component but its a contianer for Interactive elements -->

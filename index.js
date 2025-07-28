@@ -99,12 +99,31 @@ $(document).ready(function () {
     return true;
   }
 
-  function setupTogglePassword(selector, input) {
-    $(selector).on("click", function () {
-      const type = input.attr("type") === "password" ? "text" : "password";
-      input.attr("type", type);
-      $(this).text(type === "password" ? "Show" : "Hide");
-    });
+  function setupTogglePassword() {
+    $(".togglePassword")
+      .off("click keydown") // to remove the prev events
+      .on("click", function () {
+        togglePassword($(this));
+      })
+      .on("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          togglePassword($(this));
+        }
+      });
+
+    function togglePassword(toggle) {
+      const targetSelector = toggle.data("target");
+      const input = $(targetSelector);
+
+      if (input.length === 0) return;
+
+      const currentType = input.attr("type");
+      const newType = currentType === "password" ? "text" : "password";
+
+      input.attr("type", newType);
+      toggle.text(newType === "password" ? "Show" : "Hide");
+    }
   }
 
   function attachLoginHandlers() {
@@ -113,7 +132,6 @@ $(document).ready(function () {
     const emailError = $("#error-email");
     const passwordError = $("#error-password");
     const togglePassword = $(".togglePassword");
-    setupTogglePassword(togglePassword, password);
 
     $(document).on("mousedown", function (e) {
       const isClickOnToggle = $(e.target).is(".togglePassword");
@@ -150,10 +168,6 @@ $(document).ready(function () {
     const emailError = $("#error-signup-email");
     const passwordError = $("#error-signup-password");
     const confirmPasswordError = $("#error-confirm-password");
-
-    setupTogglePassword($(".togglePassword"), password);
-    setupTogglePassword($("#toggleconfirmPassword"), confirmPassword);
-
     $(document).on("mousedown", function (e) {
       const target = $(e.target);
       const active = document.activeElement;
@@ -206,4 +220,5 @@ $(document).ready(function () {
   });
 
   loadLogin();
+  setupTogglePassword();
 });

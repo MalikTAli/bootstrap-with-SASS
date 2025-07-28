@@ -147,49 +147,16 @@ body {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
   margin: 10px;
 }
-form div {
-  position: relative;
-  width: 100%;
-}
 form .password-container span {
-  position: absolute;
   right: 10px;
-  top: 50%;
   transform: translateY(-50%);
-  color: #2567ae;
-  font-weight: bold;
   cursor: pointer;
   user-select: none;
-  font-family: "Lato", sans-serif;
-}
-form div:last-of-type {
-  display: flex;
-  justify-content: space-between;
-}
-form input[type=text], form input[type=password] {
-  max-width: 100%;
-  min-width: 100%;
-  height: 50px;
-  padding: 0 12px;
 }
 form input[type=checkbox] {
   transform: scale(1.5);
-}
-form input[type=submit] {
-  height: 40px;
-  background-color: #0061aa;
-  color: white;
-  border: none;
-  font-weight: bold;
-  padding: 0px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 form .disabled {
   opacity: 0.6;
@@ -197,15 +164,6 @@ form .disabled {
 }
 form label span {
   opacity: 0.7;
-}
-form a {
-  text-decoration: none;
-  color: #2567ae;
-  font-weight: 600;
-  font-family: "Lato", sans-serif;
-}
-form ul li {
-  margin-bottom: 10px;
 }
 
 .error-message {
